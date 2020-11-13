@@ -27,7 +27,7 @@ You need anaconda or miniconda to run this package. First install anaconda or mi
     traind=ext(r"C:\Users\subha\Documents\MechineLearning\s2\S2forClassification.tif",
            r"C:\Users\subha\Documents\MechineLearning\s2\trysinglemarged.shp","r","ClassID")
            
-** Crop, mask and Layer Stack of satellite images:**
+**Crop, mask and Layer Stack of satellite images:**
 
     from satiopst.utils import icrop, imask, layerStack
     crop=icrop(r"C:\Users\subha\Documents\MechineLearning\s2\S2forClassification.tif",
