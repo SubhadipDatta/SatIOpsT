@@ -7,12 +7,22 @@ import pandas
 
 def extractbypolygon(imgpath,shppath,mode="r",class_col=None):
     """
-    Extract pixel-wise satellite image values according to class shapefile.
-    :param imgpath: Path to the Satellite image.
-    :param shppath: Path to the ESRI ShapeFile.
-    :param mode: Read only.
-    :param class_col: Name of the column containing Class ID.
-    :return: Table containing spectral information and corosponding class.
+    Extract values from satellite image acoording to the given shapefile containing class information for classification.
+
+    Parameters
+    ----------
+    imgpath : Path to satellite image.
+    shppath : Path to ESRI shapefile.
+    mode : mode of the operation no need to change, optional
+        Don't change. The default is "r".
+    class_col : Name of the column containing class values for classification.
+        Need for arrange the table of output. The default is None.
+
+    Returns
+    -------
+    tdataf : A table containing pixel values and corosponding class value.
+        Need for train ML algo.
+
     """
     if class_col==None:
         print("Please enter the column name containing class information")

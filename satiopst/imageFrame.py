@@ -3,9 +3,17 @@ import pandas
 
 def imagetoframe(imgarray):
     """
-    Convert  image numpy.array to pandas dataframe.
-    :param imgarray: Image as Numpy array
-    :return: Return as dataframe
+    Convert n-d image array to stucture data for ML algo.
+
+    Parameters
+    ----------
+    imgarray : image as numpy ndarray.
+
+    Returns
+    -------
+    satdf : satellite image as stuctured data.
+        In the table columns represent bands and rows represent pixels.
+
     """
     imlist=[] # Blank list to store 1D array
     for i in range(imgarray.shape[0]):
@@ -18,10 +26,18 @@ def imagetoframe(imgarray):
 
 def frametoimage(imgframe,imgmeta):
     """
-    Convert image from pandas dataframe to numpy array
-    :param imgframe: Image dataframe.
-    :param imgmeta: Metadata of the raw satellite image.
-    :return: From image dataframe to numpy array.
+    To convert stuctured image frame to nd image array.
+
+    Parameters
+    ----------
+    imgframe : Stuctured image data.
+    imgmeta : Metadata of the image.
+            Needed for get image width, height and band information.
+
+    Returns
+    -------
+    rs : A nd numpy image array.
+
     """
     width=imgmeta["width"]
     height=imgmeta["height"]
