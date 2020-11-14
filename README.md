@@ -1,4 +1,4 @@
-# SatIOpsT: Satellite Image Oparations Toolbox
+# SatIOpsT: Satellite Image Operations Toolbox
 This package helps you to run various oparations on satellite images.Currently Under development.
 
 ### Installation Process:
