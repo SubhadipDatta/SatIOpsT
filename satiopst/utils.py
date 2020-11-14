@@ -28,7 +28,7 @@ def icrop(imgpath,shppath):
 
 def imask(imgpath,shppath,nodata=0):
     """
-    Maske image according ESRI shapefile area.
+    Mask image according ESRI shapefile area.
 
     Parameters
     ----------
@@ -102,8 +102,8 @@ def ndi(band_1,band_2,nodata=0,replace=True):
     index : Normalized Difference Index.
 
     """
-    band_1[band_1==nodata]=np.nan
-    band_2[band_2==nodata]=np.nan
+    band_1[band_1==nodata]=numpy.nan
+    band_2[band_2==nodata]=numpy.nan
     index=(band_1-band_2)/(band_1+band_2)
     if replace == False:
         index=numpy.nan_to_num(index,nan=nodata)

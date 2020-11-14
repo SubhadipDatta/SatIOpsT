@@ -29,7 +29,7 @@ def mfilter(imgarray,size=3, stat="mean"):
 
 def edgedetection(imgarray,mode="sobel",size=3):
     """
-    Edge detection funtions
+    Edge detection functions
 
     Parameters
     ----------
@@ -54,7 +54,7 @@ def edgedetection(imgarray,mode="sobel",size=3):
     elif mode=="sobelV":
         out=scind.filters.sobel(imgarray,axis=-1)
     elif mode=="laplace":
-        out=scind.morphological_laplace(img,size=size)
+        out=scind.morphological_laplace(imgarray,size=size)
     elif mode=="prewitt":
         prewitt_v=scind.filters.prewitt(imgarray,axis=-1)
         prewitt_h=scind.filters.prewitt(imgarray,axis=1)

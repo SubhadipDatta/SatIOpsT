@@ -3,7 +3,7 @@ with open("README.md") as r:
     readme=r.read()
 setuptools.setup(
     name="SatIOpsT",
-    version="0.0.2",
+    version="0.0.4",
     author="Subhadip Datta, Soumyadeep Dutta",
     author_email="subhadipdatta007@gmail.com",
     description="Satellite Image Operations Toolbox",
@@ -23,6 +23,7 @@ setuptools.setup(
         "scipy",
         "pandas",
         "numpy",
+        "os",
     ],
     include_package_data=True,
 )

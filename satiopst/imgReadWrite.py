@@ -1,5 +1,4 @@
 import rasterio
-import numpy
 
 def imgRead(imgpath,mode="r"):
     """
