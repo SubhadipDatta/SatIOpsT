@@ -13,9 +13,9 @@ You need anaconda or miniconda to run this package. First install anaconda or mi
 #### -0.0.3
         -managed some errors.
 #### -0.0.4
-        -Fixed some bugs.
-		-Added Reprojection.
+	-Fixed some bugs.
+	-Added Reprojection.
 #### -0.0.6
-        -Added time series convertions for Raster data.
+        -Added time series conversions for Raster data.
 ### Help Page:
 https://github.com/SubhadipDatta/SatIOpsT/wiki
