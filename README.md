@@ -9,16 +9,13 @@ You need anaconda or miniconda to run this package. First install anaconda or mi
     pip install SatIOpsT
 
 ### Change log:
-#### -0.0.2
-        -fixed some minor bugs
-        -updated documentation.
-        -added new minor features.
-        -added NDI (Normalized Difference Index)
-        -added Filtering techniques.
+
 #### -0.0.3
         -managed some errors.
 #### -0.0.4
         -Fixed some bugs.
 		-Added Reprojection.
+#### -0.0.5
+        -Added time series convertions for Raster data.
 ### Help Page:
 https://github.com/SubhadipDatta/SatIOpsT/wiki
