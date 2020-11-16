@@ -1,5 +1,2 @@
-from satiopst import *
-import rasterio
-import numpy
-import geopandas
-import pandas
+__version__= "0.0.7"
+

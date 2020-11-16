@@ -1,9 +1,15 @@
 import setuptools
 with open("README.md") as r:
     readme=r.read()
+
+for line in open("satiopst\__init__.py").read().splitlines():
+        if line.startswith('__version__'):
+            delim = '"' if '"' in line else "'"
+            var=str(line.split(delim)[1])
+
 setuptools.setup(
     name="SatIOpsT",
-    version="0.0.6",
+    version=var,
     author="Subhadip Datta, Soumyadeep Dutta",
     author_email="subhadipdatta007@gmail.com",
     description="Satellite Image Operations Toolbox",
@@ -26,3 +32,4 @@ setuptools.setup(
     ],
     include_package_data=True,
 )
+
