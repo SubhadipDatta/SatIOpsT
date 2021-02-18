@@ -3,9 +3,9 @@ import rasterio
 from rasterio.mask import mask
 import geopandas
 import pandas
+import .imgReadWrite
 
-
-def extractbypolygon(imgpath,shppath,mode="r",class_col=None):
+def extractbypolygon(imgpath,shppath,class_col=None):
     """
     Extract values from satellite image acoording to the given shapefile containing class information for classification.
 
@@ -27,7 +27,11 @@ def extractbypolygon(imgpath,shppath,mode="r",class_col=None):
     if class_col==None:
         print("Please enter the column name containing class information")
     else:
-        img=rasterio.open(imgpath,mode)
+        img,meta=imgReadWrite.imgRead(imgpath)
+        nod=meta['nodata']
+        if not nod:
+            nod = 0
+        if 
         shp=geopandas.read_file(shppath)
         clsid=list(shp[class_col].unique())
         tdataf=pandas.DataFrame()
@@ -35,7 +39,7 @@ def extractbypolygon(imgpath,shppath,mode="r",class_col=None):
             shpm=shp[shp[class_col]==i]
             maski,t=mask(img,shpm["geometry"])
             df=imagetoframe(maski)
-            df = df[(df.T != 0).any()]
+            df = df[(df.T != int(nod)).any()]
             df[class_col]=int(i)
             tdataf=tdataf.append(df)
             tdataf=tdataf.reset_index(drop=True)
