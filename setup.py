@@ -10,8 +10,8 @@ for line in open("satiopst\__init__.py").read().splitlines():
 setuptools.setup(
     name="SatIOpsT",
     version=var,
-    author="Subhadip Datta, Soumyadeep Dutta",
-    author_email="subhadipdatta007@gmail.com",
+    author="GeoEspacioTech Pvt. Ltd., Subhadip Datta, Soumyadeep Dutta",
+    author_email="geoespaciotech@gmail.com",
     description="Satellite Image Operations Toolbox",
     long_description=readme,
     long_description_content_type="text/markdown",

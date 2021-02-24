@@ -3,7 +3,7 @@ import rasterio
 from rasterio.mask import mask
 import geopandas
 import pandas
-import .imgReadWrite
+import rasterio
 
 def extractbypolygon(imgpath,shppath,class_col=None):
     """
@@ -27,8 +27,8 @@ def extractbypolygon(imgpath,shppath,class_col=None):
     if class_col==None:
         print("Please enter the column name containing class information")
     else:
-        img,meta=imgReadWrite.imgRead(imgpath)
-        nod=meta['nodata']
+        img=rasterio.open(imgpath)
+        meta=img.meta
         if not nod:
             nod = 0
         if 

@@ -19,5 +19,7 @@ You need anaconda or miniconda to run this package. First install anaconda or mi
         -Added time series conversions for Raster data.
 #### -0.0.7
 		-Minor correction.
+#### -0.0.8
+		-Bug fixed
 ### Help Page:
 https://github.com/SubhadipDatta/SatIOpsT/wiki
